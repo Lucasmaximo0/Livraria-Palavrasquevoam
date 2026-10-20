@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;500;600;700;800&display=swap');
+
+:root {
+  --color-orange-light: #ffaa3b;
+  --color-orange-strong: #ff7a3d;
+  --color-purple: #9b6bff;
+  --color-blue-detail: #5cc8ff;
+  --color-bg: #221f45;
+  --surface: rgba(255, 255, 255, 0.07);
+  --surface-solid: #2d2957;
+  --color-border: rgba(255, 255, 255, 0.14);
+  --color-ink: #f1effa;
+  --color-gray: #c3c0dc;
+  --gradient-brand: linear-gradient(120deg, #ff7a3d 0%, #ffaa3b 35%, #9b6bff 100%);
+  --glow-orange: 0 0 24px rgba(255, 122, 61, 0.45);
+  --glow-purple: 0 0 30px rgba(155, 107, 255, 0.35);
+
+  --font-title: 'Fredoka', cursive;
+  --font-text: 'Nunito', sans-serif;
+
+  --radius-lg: 22px;
+  --radius-md: 14px;
+  --radius-sm: 10px;
+
+  --shadow-soft: 0 14px 34px rgba(8, 7, 22, 0.5);
+  --shadow-card: 0 8px 24px rgba(5, 5, 16, 0.4);
+
+  --container-max: 1120px;
+  --section-gap: 4.5rem;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-text);
+  color: var(--color-ink);
+  background:
+    radial-gradient(circle at 9% 16%, rgba(255, 122, 61, 0.24), transparent 36%),
+    radial-gradient(circle at 88% 8%, rgba(155, 107, 255, 0.3), transparent 40%),
+    linear-gradient(rgba(255, 255, 255, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.045) 1px, transparent 1px),
+    var(--color-bg);
+  background-size: auto, auto, 48px 48px, 48px 48px, auto;
+  background-attachment: fixed;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+button,
+input,
+select {
+  font: inherit;
+  color: inherit;
+}
+
+.container {
+  width: min(100% - 2rem, var(--container-max));
+  margin-inline: auto;
+}
+
+.sectionSpacing {
+  margin-top: var(--section-gap);
+}
+
+section[id] {
+  scroll-margin-top: 80px;
+}
+
+.glass {
+  background: var(--surface);
+  border: 1px solid var(--color-border);
+  backdrop-filter: blur(10px);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+}
+
+.gradientText {
+  background: var(--gradient-brand);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+@media (max-width: 768px) {
+  :root {
+    --section-gap: 3.5rem;
+  }
+}

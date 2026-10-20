@@ -1,0 +1,130 @@
+.wrapper {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1rem;
+}
+
+.calendar,
+.panel {
+  padding: 1rem;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.8rem;
+}
+
+.header h3 {
+  font-family: var(--font-title);
+  text-transform: capitalize;
+}
+
+.header button {
+  border: 1px solid var(--color-border);
+  color: var(--color-ink);
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 10px;
+  width: 38px;
+  height: 38px;
+  cursor: pointer;
+}
+
+.header button:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.weekRow,
+.grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 0.3rem;
+}
+
+.weekRow span {
+  font-size: 0.82rem;
+  text-align: center;
+  color: var(--color-gray);
+}
+
+.day {
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  padding: 0.45rem 0;
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--color-ink);
+}
+
+.muted {
+  opacity: 0.35;
+}
+
+.busy {
+  text-decoration: line-through;
+}
+
+.available {
+  background: rgba(255, 170, 59, 0.18);
+  border-color: rgba(255, 170, 59, 0.5);
+}
+
+.selected {
+  background: rgba(155, 107, 255, 0.35);
+  border-color: rgba(155, 107, 255, 0.85);
+  box-shadow: var(--glow-purple);
+}
+
+.legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-top: 0.8rem;
+  color: var(--color-gray);
+}
+
+.legend span {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.legend i {
+  width: 12px;
+  height: 12px;
+  border-radius: 4px;
+}
+
+.legendAvailable {
+  background: rgba(255, 170, 59, 0.5);
+}
+
+.legendBusy {
+  background: rgba(255, 255, 255, 0.16);
+}
+
+.legendSelected {
+  background: rgba(155, 107, 255, 0.8);
+}
+
+.panel h4 {
+  font-family: var(--font-title);
+  margin-bottom: 0.6rem;
+}
+
+.panel p {
+  color: var(--color-gray);
+  line-height: 1.5;
+}
+
+.panel strong {
+  margin: 0.6rem 0 0.9rem;
+  display: block;
+}
+
+@media (max-width: 880px) {
+  .wrapper {
+    grid-template-columns: 1fr;
+  }
+}

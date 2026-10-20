@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 320" role="img" aria-label="Ilustração de escola">
+  <rect width="480" height="320" rx="28" fill="#2d2957"/>
+  <rect x="50" y="120" width="380" height="150" rx="14" fill="#3a3570"/>
+  <rect x="95" y="80" width="290" height="50" rx="12" fill="#ff7a3d"/>
+  <rect x="80" y="150" width="65" height="65" rx="8" fill="#5cc8ff"/>
+  <rect x="165" y="150" width="65" height="65" rx="8" fill="#5cc8ff"/>
+  <rect x="250" y="150" width="65" height="65" rx="8" fill="#5cc8ff"/>
+  <rect x="335" y="150" width="65" height="65" rx="8" fill="#5cc8ff"/>
+  <rect x="212" y="205" width="56" height="65" rx="8" fill="#ffaa3b"/>
+</svg>

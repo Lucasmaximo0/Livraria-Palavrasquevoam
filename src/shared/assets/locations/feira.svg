@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 320" role="img" aria-label="Ilustração de feira livre">
+  <rect width="480" height="320" rx="28" fill="#2d2957"/>
+  <circle cx="90" cy="78" r="24" fill="#ffaa3b"/>
+  <rect x="58" y="134" width="364" height="118" rx="16" fill="#3a3570"/>
+  <path d="M58 134h364l-34-46H92z" fill="#ff7a3d"/>
+  <path d="M96 88h286l-13 17H109z" fill="#9b6bff"/>
+  <rect x="92" y="170" width="72" height="30" rx="8" fill="#5cc8ff"/>
+  <rect x="182" y="170" width="72" height="30" rx="8" fill="#ffaa3b"/>
+  <rect x="272" y="170" width="72" height="30" rx="8" fill="#ff7a3d"/>
+</svg>

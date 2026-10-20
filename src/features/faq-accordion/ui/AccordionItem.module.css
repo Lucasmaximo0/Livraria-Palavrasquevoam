@@ -1,0 +1,35 @@
+.item {
+  background: var(--surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  backdrop-filter: blur(8px);
+}
+
+.trigger {
+  width: 100%;
+  border: none;
+  background: transparent;
+  text-align: left;
+  padding: 0.9rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 800;
+  color: var(--color-ink);
+  cursor: pointer;
+}
+
+.icon {
+  transition: transform 0.2s ease;
+  font-size: 1.2rem;
+}
+
+.iconOpen {
+  transform: rotate(45deg);
+}
+
+.content {
+  padding: 0 0.9rem 0.9rem;
+  line-height: 1.5;
+  color: var(--color-gray);
+}
