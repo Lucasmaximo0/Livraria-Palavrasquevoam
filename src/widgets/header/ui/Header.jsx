@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import { scrollToId } from '../../../shared/lib/scrollToId'
 import Button from '../../../shared/ui/button/Button'
 import logo from '../../../shared/assets/logo.webp'
@@ -13,6 +14,10 @@ const navItems = [
 
 function Header({ user, onLogout, onOpenAuth }) {
   const firstName = user?.name?.split(' ')[0]
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
+
+  const toggleMenu = () => setIsMenuOpen((prev) => !prev)
+  const closeMenu = () => setIsMenuOpen(false)
 
   return (
     <header className={styles.header}>
@@ -45,8 +50,65 @@ function Header({ user, onLogout, onOpenAuth }) {
                 Entrar / Cadastrar
               </Button>
             )}
+            <button
+              type="button"
+              className={styles.hamburger}
+              onClick={toggleMenu}
+              aria-label="Abrir menu"
+              aria-expanded={isMenuOpen}
+            >
+              ☰
+            </button>
             <Button onClick={() => scrollToId('agendar')}>Agendar visita</Button>
           </div>
+
+          {isMenuOpen && (
+            <nav className={styles.navMobile} aria-label="Menu mobile" onClick={closeMenu}>
+              <div className={styles.menuContent} onClick={(e) => e.stopPropagation()}>
+                {navItems.map((item) => (
+                  <button
+                    key={item.id}
+                    type="button"
+                    className={styles.menuLink}
+                    onClick={() => {
+                      scrollToId(item.id)
+                      closeMenu()
+                    }}
+                  >
+                    {item.label}
+                  </button>
+                ))}
+                {user ? (
+                  <button type="button" className={styles.menuLink} onClick={onLogout}>
+                    Sair
+                  </button>
+                ) : (
+                  <Button
+                    variant="light"
+                    className={styles.menuButton}
+                    onClick={() => {
+                      onOpenAuth()
+                      closeMenu()
+                    }}
+                  >
+                    Entrar / Cadastrar
+                  </Button>
+                )}
+                <Button
+                  className={styles.menuButton}
+                  onClick={() => {
+                    scrollToId('agendar')
+                    closeMenu()
+                  }}
+                >
+                  Agendar visita
+                </Button>
+                <button type="button" className={styles.closeMobile} onClick={closeMenu}>
+                  ✕ Fechar
+                </button>
+              </div>
+            </nav>
+          )}
         </div>
       </div>
     </header>

@@ -96,6 +96,68 @@
   white-space: nowrap;
 }
 
+.hamburger {
+  display: none;
+  background: transparent;
+  border: none;
+  color: var(--color-ink);
+  font-size: 1.5rem;
+  cursor: pointer;
+  line-height: 1;
+  padding: 0;
+}
+
+.navMobile {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: var(--color-bg);
+  z-index: 50;
+  padding: 7rem 1.5rem 2rem;
+  box-sizing: border-box;
+  overflow-y: auto;
+}
+
+.menuContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+  width: 100%;
+  max-width: 360px;
+  margin: 0 auto;
+}
+
+.menuLink {
+  background: transparent;
+  border: none;
+  color: var(--color-ink);
+  font-family: var(--font-text);
+  font-size: 1.25rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: center;
+  width: 100%;
+  padding: 0.5rem 0;
+}
+
+.menuButton {
+  width: 100%;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.closeMobile {
+  background: transparent;
+  border: none;
+  color: var(--color-purple);
+  font-family: var(--font-text);
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 1.5rem;
+}
+
 @media (max-width: 980px) {
   .inner {
     justify-content: space-between;
@@ -105,11 +167,15 @@
     display: none;
   }
 
+  .hamburger {
+    display: block;
+  }
+
   .brandName {
-    display: none;
+    display: block;
   }
 
   .greeting {
-    display: none;
+    display: block;
   }
 }
