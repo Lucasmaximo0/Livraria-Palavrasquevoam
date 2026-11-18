@@ -1,5 +1,5 @@
-import { testimonials } from '../../../entities/testimonial/model/testimonials'
-import SectionTitle from '../../../shared/ui/section-title/SectionTitle'
+import { testimonials } from '../../../entities'
+import { SectionTitle } from '../../../shared'
 import styles from './Testimonials.module.css'
 
 function Testimonials() {

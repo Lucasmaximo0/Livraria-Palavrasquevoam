@@ -1,6 +1,5 @@
-import { profileOptions } from '../../../entities/user/model/users'
-import Button from '../../../shared/ui/button/Button'
-import Modal from '../../../shared/ui/modal/Modal'
+import { profileOptions } from '../../../entities'
+import { Button, Modal } from '../../../shared'
 import { useAuthForm } from '../model/useAuthForm'
 import styles from './AuthModal.module.css'
 

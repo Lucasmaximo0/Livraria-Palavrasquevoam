@@ -118,6 +118,10 @@
   overflow-y: auto;
 }
 
+.navMobileOpen {
+  display: block;
+}
+
 .menuContent {
   display: flex;
   flex-direction: column;

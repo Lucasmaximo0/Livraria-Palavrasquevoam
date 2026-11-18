@@ -1,4 +1,4 @@
-import logo from '../../../shared/assets/logo.webp'
+import { logo } from '../../../shared'
 import styles from './Footer.module.css'
 
 function Footer() {

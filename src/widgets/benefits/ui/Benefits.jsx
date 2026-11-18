@@ -1,5 +1,5 @@
-import { benefits } from '../../../entities/benefit/model/benefits'
-import SectionTitle from '../../../shared/ui/section-title/SectionTitle'
+import { benefits } from '../../../entities'
+import { SectionTitle } from '../../../shared'
 import styles from './Benefits.module.css'
 
 function Benefits() {

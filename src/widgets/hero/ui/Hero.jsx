@@ -1,5 +1,4 @@
-import Button from '../../../shared/ui/button/Button'
-import logo from '../../../shared/assets/logo.webp'
+import { Button, logo } from '../../../shared'
 import styles from './Hero.module.css'
 
 const floatingWords = ['LEITURA', 'IMAGINAÇÃO', 'CULTURA', 'INFÂNCIA', 'HISTÓRIAS', 'ESCOLA']
@@ -11,9 +10,9 @@ function Hero({ onScrollToBooking, onScrollToSchedule }) {
         <div className={`${styles.card} glass`}>
           <div className={styles.content}>
             <p className={styles.kicker}>Livraria itinerante</p>
-            <h1>
+            <h1 className={styles.title}>
               A gente leva os livros
-              <span>até onde as crianças estão</span>
+              <span className={styles.titleHighlight}>até onde as crianças estão</span>
             </h1>
             <p className={styles.description}>
               A Palavras que Voam visita escolas gratuitamente e também participa de feiras livres,

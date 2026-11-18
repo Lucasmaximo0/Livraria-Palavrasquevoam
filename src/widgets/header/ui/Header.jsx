@@ -1,8 +1,6 @@
 import { useState } from 'react'
-import { scrollToId } from '../../../shared/lib/scrollToId'
-import Button from '../../../shared/ui/button/Button'
-import logo from '../../../shared/assets/logo.webp'
-import { getInitials } from '../../../entities/user/model/users'
+import { Button, logo, scrollToId } from '../../../shared'
+import { getInitials } from '../../../entities'
 import styles from './Header.module.css'
 
 const navItems = [
@@ -63,7 +61,11 @@ function Header({ user, onLogout, onOpenAuth }) {
           </div>
 
           {isMenuOpen && (
-            <nav className={styles.navMobile} aria-label="Menu mobile" onClick={closeMenu}>
+            <nav
+              className={`${styles.navMobile} ${styles.navMobileOpen}`}
+              aria-label="Menu mobile"
+              onClick={closeMenu}
+            >
               <div className={styles.menuContent} onClick={(e) => e.stopPropagation()}>
                 {navItems.map((item) => (
                   <button
@@ -79,7 +81,14 @@ function Header({ user, onLogout, onOpenAuth }) {
                   </button>
                 ))}
                 {user ? (
-                  <button type="button" className={styles.menuLink} onClick={onLogout}>
+                  <button
+                    type="button"
+                    className={styles.menuLink}
+                    onClick={() => {
+                      onLogout()
+                      closeMenu()
+                    }}
+                  >
                     Sair
                   </button>
                 ) : (

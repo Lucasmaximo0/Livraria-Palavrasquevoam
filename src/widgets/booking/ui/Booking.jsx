@@ -1,6 +1,6 @@
-import { availableDates } from '../../../entities/availability/model/availableDates'
-import AvailabilityCalendar from '../../../features/schedule-visit/ui/AvailabilityCalendar'
-import SectionTitle from '../../../shared/ui/section-title/SectionTitle'
+import { availableDates } from '../../../entities'
+import { AvailabilityCalendar } from '../../../features'
+import { SectionTitle } from '../../../shared'
 
 function Booking({ onSelectDay }) {
   return (

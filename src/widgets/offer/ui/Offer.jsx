@@ -1,7 +1,5 @@
-import { readerOffer, schoolOffer } from '../../../entities/offer/model/offer'
-import { scrollToId } from '../../../shared/lib/scrollToId'
-import Button from '../../../shared/ui/button/Button'
-import SectionTitle from '../../../shared/ui/section-title/SectionTitle'
+import { readerOffer, schoolOffer } from '../../../entities'
+import { Button, SectionTitle, scrollToId } from '../../../shared'
 import styles from './Offer.module.css'
 
 function OfferCard({ offer, highlight }) {

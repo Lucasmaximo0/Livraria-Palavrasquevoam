@@ -1,6 +1,6 @@
-import { locations } from '../../../entities/location/model/locations'
-import SectionTitle from '../../../shared/ui/section-title/SectionTitle'
-import LocationCarousel from '../../../features/location-carousel/ui/LocationCarousel'
+import { locations } from '../../../entities'
+import { LocationCarousel } from '../../../features'
+import { SectionTitle } from '../../../shared'
 import styles from './Locations.module.css'
 
 function Locations() {

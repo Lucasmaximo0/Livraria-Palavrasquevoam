@@ -1,6 +1,5 @@
-import { calendarMonths } from '../../../entities/availability/model/availableDates'
-import { formatLongDate, monthLabel } from '../../../shared/lib/formatDate'
-import Button from '../../../shared/ui/button/Button'
+import { calendarMonths } from '../../../entities'
+import { Button, formatLongDate, monthLabel } from '../../../shared'
 import { useAvailabilityCalendar } from '../model/useAvailabilityCalendar'
 import styles from './AvailabilityCalendar.module.css'
 
@@ -42,6 +41,9 @@ function AvailabilityCalendar({ availableDates, onConfirmDay }) {
             <button
               key={cell.iso}
               type="button"
+              disabled={!cell.isAvailable}
+              aria-disabled={!cell.isAvailable}
+              aria-pressed={cell.isSelected}
               className={[
                 styles.day,
                 !cell.isCurrentMonth && styles.muted,

@@ -1,6 +1,4 @@
-import Button from '../../../shared/ui/button/Button'
-import Modal from '../../../shared/ui/modal/Modal'
-import { formatLongDate } from '../../../shared/lib/formatDate'
+import { Button, Modal, formatLongDate } from '../../../shared'
 import { useScheduleForm } from '../model/useScheduleForm'
 import styles from './ScheduleVisitModal.module.css'
 

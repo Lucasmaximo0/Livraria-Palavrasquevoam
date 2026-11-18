@@ -1,6 +1,4 @@
-import escolaImage from '../../../shared/assets/locations/escola.svg'
-import feiraImage from '../../../shared/assets/locations/feira.svg'
-import shoppingImage from '../../../shared/assets/locations/shopping.svg'
+import { escolaLocationImage, feiraLocationImage, shoppingLocationImage } from '../../../shared'
 
 export const locations = [
   {
@@ -10,7 +8,7 @@ export const locations = [
     description:
       'Levamos livros, contação de histórias e mediação de leitura para turmas, professores e famílias.',
     audience: 'Público: alunos, professores e famílias.',
-    image: escolaImage
+    image: escolaLocationImage
   },
   {
     id: 'feira-livre-praca',
@@ -19,7 +17,7 @@ export const locations = [
     description:
       'Montamos uma livraria itinerante em áreas abertas com acervo para diferentes idades e interesses.',
     audience: 'Público: crianças, jovens, adultos e visitantes da região.',
-    image: feiraImage
+    image: feiraLocationImage
   },
   {
     id: 'shopping',
@@ -28,6 +26,6 @@ export const locations = [
     description:
       'Criamos um ponto cultural com livros infantis, juvenis e para pais que desejam incentivar a leitura.',
     audience: 'Público: famílias e visitantes do shopping.',
-    image: shoppingImage
+    image: shoppingLocationImage
   }
 ]

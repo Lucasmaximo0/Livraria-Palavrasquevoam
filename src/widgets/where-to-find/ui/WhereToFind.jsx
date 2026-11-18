@@ -1,6 +1,5 @@
-import { schedule } from '../../../entities/event/model/schedule'
-import SectionTitle from '../../../shared/ui/section-title/SectionTitle'
-import { formatLongDate } from '../../../shared/lib/formatDate'
+import { schedule } from '../../../entities'
+import { SectionTitle, formatLongDate } from '../../../shared'
 import styles from './WhereToFind.module.css'
 
 function WhereToFind() {

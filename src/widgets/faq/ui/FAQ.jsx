@@ -1,6 +1,6 @@
-import { faqs } from '../../../entities/faq/model/faqs'
-import AccordionItem from '../../../features/faq-accordion/ui/AccordionItem'
-import SectionTitle from '../../../shared/ui/section-title/SectionTitle'
+import { faqs } from '../../../entities'
+import { AccordionItem } from '../../../features'
+import { SectionTitle } from '../../../shared'
 import styles from './FAQ.module.css'
 
 function FAQ() {

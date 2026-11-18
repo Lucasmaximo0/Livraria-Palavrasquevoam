@@ -1,5 +1,5 @@
 import { useMemo, useState } from 'react'
-import { toIsoDate } from '../../../shared/lib/formatDate'
+import { toIsoDate } from '../../../shared'
 
 function monthDate(monthValue) {
   return new Date(`${monthValue}-01T00:00:00`)

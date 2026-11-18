@@ -1,5 +1,5 @@
-import { steps } from '../../../entities/how-it-works/model/steps'
-import SectionTitle from '../../../shared/ui/section-title/SectionTitle'
+import { steps } from '../../../entities'
+import { SectionTitle } from '../../../shared'
 import styles from './HowItWorks.module.css'
 
 function HowItWorks() {

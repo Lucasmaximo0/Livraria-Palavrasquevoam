@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { demoUser } from '../../../entities/user/model/users'
+import { demoUser } from '../../../entities'
 
 const loginInitial = { email: '', password: '' }
 const signupInitial = {
